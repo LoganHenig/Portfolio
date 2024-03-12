@@ -8,14 +8,16 @@ import {BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
+    <BrowserRouter>
     <NextUIProvider>
-      <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<Animation/>} />
         <Route path="/portfolio" element={<Landing/>} />
       </Routes>
-      </BrowserRouter>
+
     </NextUIProvider>
+    </BrowserRouter>
   );
 }
 
