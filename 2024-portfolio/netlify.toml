@@ -3,7 +3,7 @@
 [build]
   base    = "2024-portfolio"
   publish = "build/"
-  command = "npm run build"
+  command = "CI= npm run build"
 
 [[redirects]]
   from = "/*"
