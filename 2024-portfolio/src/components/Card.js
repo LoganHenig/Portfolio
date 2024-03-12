@@ -3,7 +3,7 @@ import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nex
 
 export const CustomCard = ({iconSrc, bodyText, link, linkText,headerText,headerUrl}) => {
   return (
-    <Card className="max-w-[400px] bg-card ">
+    <Card className="max-w-[400px] bg-card  my-card">
       <CardHeader className="flex gap-3">
         <Image
           alt="card logo"

@@ -180,6 +180,11 @@ html::-webkit-scrollbar-track {
   background-image: linear-gradient(176deg, #18181B 70%, #27272A calc(70% + 2px)) ;
   height: 15rem;
   width:100%;
+  animation: slideDown 1s ease-in-out forwards;
+}
+@keyframes slideDown {
+  0% { transform: translate(0, -40%);}
+  100% { transform: translate(0, 0);}
 }
 .my-name {
   color: hsl(0, 0%, 28%);
@@ -207,4 +212,14 @@ html::-webkit-scrollbar-track {
   100% {
     background-position: 2000px;
   }
+}
+.my-card{
+  margin-bottom: 1rem;
+}
+.my-card:hover{
+  animation: select forwards .5s;
+}
+@keyframes select {
+  0% { transform: translate(0, 0);}
+  100% { transform: translate(0, -5%);}
 }
