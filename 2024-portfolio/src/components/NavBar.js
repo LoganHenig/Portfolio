@@ -4,7 +4,7 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nex
 
 export const NavBar = () => {
   return (
-    <Navbar shouldHideOnScroll>
+    <Navbar shouldHideOnScroll className="bg-dark">
       <NavbarBrand>
         {/* <AcmeLogo /> */}
         <p className="font-bold text-inherit">LOGAN HENIG</p>

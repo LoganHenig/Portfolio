@@ -79,6 +79,9 @@ html::-webkit-scrollbar-track {
   src: local("Goblin") url("./assets/a-goblin-appears-font/AGoblinAppears-o2aV.ttf") format('truetype');
 }
 
+.font{
+  font-family: monospace;
+}
 .logan-henig{
   position:absolute;
   inset: 0;
@@ -141,4 +144,67 @@ html::-webkit-scrollbar-track {
 @keyframes fadeOut {
   0% {opacity: 1; transform: translate(0, 0);}
   100% {opacity: 0; transform: translate(0, 160%);}
+}
+
+.center-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tech-continer{
+  display: flex;
+  justify-content: space-around;
+
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 80rem;
+
+}
+.technology-used{
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-family: monospace;
+  margin: 2rem;
+  padding: 2rem;
+  border-bottom: #ffffff solid 1px;
+  max-width: 75rem;
+  width: 100%;
+}
+.name-container{
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(176deg, #18181B 70%, #27272A calc(70% + 2px)) ;
+  height: 15rem;
+  width:100%;
+}
+.my-name {
+  color: hsl(0, 0%, 28%);
+  font-size: 50px!important;
+  font-weight: bold!important;
+  font-family: monospace;
+  letter-spacing: 7px!important;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 64px;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 15s infinite linear;
+  font-size: 50px;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 2000px;
+  }
+  100% {
+    background-position: 2000px;
+  }
 }

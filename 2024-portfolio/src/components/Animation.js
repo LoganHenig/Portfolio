@@ -82,7 +82,7 @@ export const Animation = () => {
         <Fade delay={1500} Animation="bounceIntRight">    
               
             <div className="logan-henig">
-                <span className="flex-container">	&#60;div&#62; Logan Henig &#60;/div&#62;</span>
+                <span className="flex-container font">	&#60;div&#62; Logan Henig &#60;/div&#62;</span>
 
                 <Button onClick={()=>{aboutToNavigate("../portfolio")}} radius="full" className=" click-me bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">
 

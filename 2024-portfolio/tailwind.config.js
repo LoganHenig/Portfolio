@@ -24,7 +24,13 @@ module.exports = {
         },
         dark: {
           layout: {}, // dark theme layout tokens
-          colors: {}, // dark theme colors
+          colors: {
+            dark: '#18181B',
+            background: '#27272A',
+            card: '#3F3F46'
+
+
+          }, // dark theme colors
         },
         // ... custom themes
       },
