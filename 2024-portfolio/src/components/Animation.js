@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Fade } from "react-awesome-reveal";
+import { Fade,AttentionSeeker, Hinge } from "react-awesome-reveal";
 import { Tile } from "./Tile";
 import { Button } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ export const Animation = () => {
     const [col, setCol] = useState(0);
     const [row, setRow] = useState(0);
     const [squareArr,setSquareArr] = useState([]);
+    const [showName,setShowName] = useState(true);
     const navigate = useNavigate();
      // USING 75 PX FOR SQUARE SIZE
     useEffect(() => {
@@ -21,10 +22,15 @@ export const Animation = () => {
     const setColRow = () =>{
         setCol(Math.floor(document.body.clientWidth / 75));
         setRow(Math.floor(document.body.clientHeight / 75));
-        console.log(Math.floor(document.body.clientHeight) + " height")
     }
 
     useEffect(() =>{
+        setGrid()
+    },[col, row]);
+
+    const setGrid = () => {
+        console.log("clicked")
+        setSquareArr([]);
         let rows = [];
         // for (var i = 0; i < col*row; i++){
         //     rows.push(<Tile key={i} id={i} number={i}></Tile>)
@@ -38,42 +44,46 @@ export const Animation = () => {
           rows.push(cell)
         }
         setSquareArr(rows)
-    },[col, row])
-    useEffect(()=>{
-        console.log('arr')
-        console.log(squareArr); 
+    }
+    useEffect(() =>{
+        if(squareArr.length <= 0){
+            setGrid();
+        }
     },[squareArr])
+    const aboutToNavigate = url =>{
+        navigate(url);
+    }
+
   return (
     <>
-    <div id="grid">
-        <Fade cascade={true} damping={.1}>
-        <div  id="grid">
+
+        <div  id="grid" onClick={() => {setSquareArr([]) }}>
         {squareArr.length > 0 &&
 
             squareArr.map((row, i) => (
             // {row}
             <><Fade cascade={true} damping={.1}>{row}</Fade></>
         ))}
+
         </div>
         {/* {
             squareArr   THIS WORKS
         } */}
-        </Fade>
-    </div>
-    {/* CENTERED TEXT */}
-    <Fade delay={1500} Animation="bounceIntRight">
-    <div className="absolute">
-        <div className="flex-logan">
-            <div className="logan-henig">
-                Logan Henig
-            </div>
-            <Button onClick={()=>{navigate("../portfolio")}} radius="full" className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">
-                Click ME
-            </Button>
-        </div>
-    </div>
-    </Fade>
 
+            {/* CENTERED TEXT */}
+        <Fade delay={1500} Animation="bounceIntRight">    
+              
+            <div className="logan-henig">
+                <span className="flex-container">Logan Henig</span>
+
+                <Button onClick={()=>{aboutToNavigate("../portfolio")}} radius="full" className=" click-me bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">
+
+                {/* <Button onClick={()=>{setShowName(!showName)}} radius="full" className=" click-me bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"> */}
+                    Click ME
+                </Button>
+            </div>
+
+        </Fade>
     </>
     ) 
 }    

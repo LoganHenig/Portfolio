@@ -34,6 +34,7 @@ html::-webkit-scrollbar-track {
   border:  solid #cacaca;
 }
 #grid {
+  z-index: 2;
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -42,6 +43,7 @@ html::-webkit-scrollbar-track {
   justify-content: center;
   background-color: #b7dfff;
   .grid-item {
+    z-index: 5;
     min-width: 100%;
     min-height: 100%;
     background-color: rgb(240, 240, 240);
@@ -68,34 +70,26 @@ html::-webkit-scrollbar-track {
   }
 }
 .grid-item:hover{
-  opacity: 0.8;
+  opacity: .1;
   background-color: rgb(196, 45, 45);
 }
 @font-face {
   font-family: "Goblin";
   src: local("Goblin") url("./assets/a-goblin-appears-font/AGoblinAppears-o2aV.ttf") format('truetype');
 }
-.absolute{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: auto;
-}
-.flex-logan{
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
+
 .logan-henig{
-  height: auto;
-  min-width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position:absolute;
+  inset: 0;
+  margin: auto;
+
+  z-index: 3;
+  max-height: 10vh;
+  min-width:auto;
+  max-width: max-content;
+  padding-left: 2vw;
+  padding-right:2vw;
+  
   border: #b7dfff;
   border: solid 2px;
   border-radius: 140px;
@@ -103,10 +97,20 @@ html::-webkit-scrollbar-track {
   font-family: "Goblin";
   font-size: 4vw;
   font-size-adjust: 2;
-  margin: 3rem;
   margin-top: 30vh;
+
+  background-color:  #b7dfff;
+}
+.flex-container{
+  height:100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:  #b7dfff;
+  flex-direction: column;
+  max-height: fit-content;
+}
+.click-me{
+  position: relative; 
+  top:30;
+  left:70%
 }
