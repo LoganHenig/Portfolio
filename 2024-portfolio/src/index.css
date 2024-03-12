@@ -53,6 +53,7 @@ html::-webkit-scrollbar-track {
     justify-content: center;
     align-items: center;
     font-size-adjust: auto;
+    
     &:after {
       content: "";
       position: absolute;
@@ -85,7 +86,8 @@ html::-webkit-scrollbar-track {
 
   z-index: 3;
   max-height: 10vh;
-  min-width:auto;
+  min-height: 50px;
+  min-width:200px;
   max-width: max-content;
   padding-left: 2vw;
   padding-right:2vw;
@@ -113,4 +115,29 @@ html::-webkit-scrollbar-track {
   position: relative; 
   top:30;
   left:70%
+}
+.hidden-1 {
+  animation: fadeOut forwards;
+  animation-duration: 3s;
+  }
+.hidden-2 {
+  animation: fadeOut forwards;
+  animation-duration: 2s;
+}
+.hidden-3 {
+  animation: fadeOut forwards;
+  animation-duration: 4s;
+}
+.hidden-4 {
+  animation: fadeOut forwards;
+  animation-duration: 1s;
+}
+.hidden-5 {
+  animation: fadeOut forwards;
+  animation-duration: 5s;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1; transform: translate(0, 0);}
+  100% {opacity: 0; transform: translate(0, 100%);}
 }

@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 export const Animation = () => {
     const [col, setCol] = useState(0);
     const [row, setRow] = useState(0);
+    const [anime, setAnime] = useState("");
     const [squareArr,setSquareArr] = useState([]);
     const [showName,setShowName] = useState(true);
     const navigate = useNavigate();
@@ -39,7 +40,7 @@ export const Animation = () => {
         for (var i = 0; i < col; i++){
           let cell = []
           for (var j = 0; j < row; j++){
-            cell.push(<Tile key={j} id={j}></Tile>)
+            cell.push(<div  key={j} id={j}></div>)
           }
           rows.push(cell)
         }
@@ -50,8 +51,13 @@ export const Animation = () => {
             setGrid();
         }
     },[squareArr])
-    const aboutToNavigate = url =>{
-        navigate(url);
+    const delay = ms => new Promise(
+        resolve => setTimeout(resolve, ms)
+      );
+    const aboutToNavigate = async url =>{ 
+    setAnime("hidden")
+    await delay(3000);
+    navigate(url);
     }
 
   return (
@@ -62,7 +68,9 @@ export const Animation = () => {
 
             squareArr.map((row, i) => (
             // {row}
-            <><Fade cascade={true} damping={.1}>{row}</Fade></>
+            <><Fade  cascade={true} damping={.1}>{
+                row.map((col,j)=> <Tile hidden={anime}> {col}</Tile>)
+                }</Fade></>
         ))}
 
         </div>
