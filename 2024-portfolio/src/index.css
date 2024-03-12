@@ -139,5 +139,5 @@ html::-webkit-scrollbar-track {
 
 @keyframes fadeOut {
   0% {opacity: 1; transform: translate(0, 0);}
-  100% {opacity: 0; transform: translate(0, 100%);}
+  100% {opacity: 0; transform: translate(0, 160%);}
 }

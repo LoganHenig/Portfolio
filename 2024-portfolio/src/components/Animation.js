@@ -56,7 +56,7 @@ export const Animation = () => {
       );
     const aboutToNavigate = async url =>{ 
     setAnime("hidden")
-    await delay(3000);
+    await delay(2000);
     navigate(url);
     }
 
