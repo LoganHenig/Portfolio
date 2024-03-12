@@ -41,7 +41,7 @@ html::-webkit-scrollbar-track {
   grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(75px, 1fr));
   justify-content: center;
-  background-color: #b7dfff;
+  background-color: #9b9b9b;
   .grid-item {
     z-index: 5;
     min-width: 100%;
@@ -101,7 +101,8 @@ html::-webkit-scrollbar-track {
   font-size-adjust: 2;
   margin-top: 30vh;
 
-  background-color:  #b7dfff;
+  background-color:  #353535;
+  color: white
 }
 .flex-container{
   height:100%;
