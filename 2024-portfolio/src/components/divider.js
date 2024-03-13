@@ -6,7 +6,7 @@ import './divider.css'
 export const MyDivider = ({number, hidden}) => {
     const [college, setCollege] = useState("");
     const [cert, setCert] = useState("");
-    const [job, setJob] = useState("");
+    const [job, setJob] = useState("selected");
 
     const setHighlight = (select) =>{
         setCollege("");
@@ -33,11 +33,12 @@ export const MyDivider = ({number, hidden}) => {
         </div>
         <Divider className="my-4" />
         <div className="flex h-5 items-center space-x-4 text-small">
-            <div onClick={()=>{setHighlight("college")}} className={`btn-hover ${college}`}>College</div>
+            <div onClick={()=>{setHighlight("job")}} className={`btn-hover ${job}`}>Current Job</div>
             <Divider orientation="vertical" />
             <div onClick={()=>{setHighlight("cert")}} className={`btn-hover ${cert}`}>Certifications</div>
             <Divider orientation="vertical" />
-            <div onClick={()=>{setHighlight("job")}} className={`btn-hover ${job}`}>Current Job</div>
+            <div onClick={()=>{setHighlight("college")}} className={`btn-hover ${college}`}>College</div>
+
         </div>
         </div>
     </div>
