@@ -30,6 +30,7 @@ export const Landing = () => {
     const [languageChip, setLanguageChip] = useState(false);
     const [uiChip, setUiChip] = useState(false);
     const [database, setDatabase] = useState(false);
+    const [otherChip, setOtherChip] = useState(false);
 
     const [delayBool, setDelayBool] = useState(true);
 
@@ -66,12 +67,16 @@ export const Landing = () => {
         if(uiChip){
             tempCards = [...tempCards, cardData.filter((card) => card.props.tag ==="UI")];
             console.log(tempCards)
+        }
+        if(otherChip){
+            tempCards = [...tempCards, cardData.filter((card) => card.props.tag ==="Other")];
+            console.log(tempCards)
         } 
-        if(!uiChip && !languageChip && !database){
+        if(!uiChip && !languageChip && !database && !otherChip){
             tempCards = cardData
         }
         setFilteredCardData(tempCards)
-    },[languageChip, database, uiChip]);
+    },[languageChip, database, uiChip, otherChip]);
 
     useEffect(() =>{
         console.log(delayBool)
@@ -119,12 +124,16 @@ export const Landing = () => {
     </div>    
     <h3 className='technology-used'> Technology I have used to make other projects </h3>
     <div className="chip-container">
-        <div className="flex gap-4 flex-start">
-
-            <Chip className="chip" onClick={() => {setLanguageChip(!languageChip); clearCards(1000);}} color={`${languageChip ? "primary" : "default"}`}>Language</Chip>
-            <Chip className="chip" onClick={() => {setUiChip(!uiChip); clearCards(1000);}} color={`${uiChip ? "primary" : "default"}`}>User Interface</Chip>
-            <Chip className="chip" onClick={() => {setDatabase(!database); clearCards(1000);}} color={`${database ? "primary" : "default"}`}>Backend/Database</Chip>
-        </div> 
+        <div className="fliter-and-chips">
+            <div className="filter">Filters:</div> 
+            <div className="flex gap-4 flex-start flex-wrap">
+                
+                <Chip className="chip" onClick={() => {setLanguageChip(!languageChip); clearCards(1000);}} color={`${languageChip ? "primary" : "default"}`}>Coding Languages</Chip>
+                <Chip className="chip" onClick={() => {setUiChip(!uiChip); clearCards(1000);}} color={`${uiChip ? "primary" : "default"}`}>User Interface</Chip>
+                <Chip className="chip" onClick={() => {setDatabase(!database); clearCards(1000);}} color={`${database ? "primary" : "default"}`}>Backend/Database</Chip>
+                <Chip className="chip" onClick={() => {setOtherChip(!otherChip); clearCards(1000);}} color={`${otherChip ? "primary" : "default"}`}>Other</Chip>
+            </div> 
+        </div>
     </div>
     <div className="tech-continer" >
 
