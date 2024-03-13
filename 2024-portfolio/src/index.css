@@ -121,7 +121,7 @@ html::-webkit-scrollbar-track {
   left:70%
 }
 .hidden-1 {
-  animation: fadeOut forwards;
+  animation: fadeOut1 forwards;
   animation-duration: 3s;
   }
 .hidden-2 {
@@ -129,21 +129,29 @@ html::-webkit-scrollbar-track {
   animation-duration: 2s;
 }
 .hidden-3 {
-  animation: fadeOut forwards;
+  animation: fadeOut2 forwards;
   animation-duration: 4s;
 }
 .hidden-4 {
-  animation: fadeOut forwards;
+  animation: fadeOut2 forwards;
   animation-duration: 1s;
 }
 .hidden-5 {
-  animation: fadeOut forwards;
+  animation: fadeOut1 forwards;
   animation-duration: 5s;
 }
 
 @keyframes fadeOut {
   0% {opacity: 1; transform: translate(0, 0);}
   100% {opacity: 0; transform: translate(0, 160%);}
+}
+@keyframes fadeOut1 {
+  0% {opacity: 1; transform: translate(0, 0);}
+  100% {opacity: 0; transform: translate(30%, 160%);}
+}
+@keyframes fadeOut2 {
+  0% {opacity: 1; transform: translate(0, 0);}
+  100% {opacity: 0; transform: translate(-30%, 160%);}
 }
 
 .center-content{
