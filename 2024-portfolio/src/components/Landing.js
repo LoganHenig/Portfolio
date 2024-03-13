@@ -12,6 +12,11 @@ import github from '../assets/github.png'
 import spring from '../assets/springboot.png'
 import mongo from '../assets/mongo.png'
 import azure from '../assets/azure.png'
+import java from '../assets/java.png'
+import cpp from '../assets/c++.png'
+import python from '../assets/python.png'
+import sql from '../assets/sql.png'
+
 import { Footer } from "./footer";
 import { MyDivider } from "./divider";
 
@@ -27,7 +32,15 @@ export const Landing = () => {
         <CustomCard  iconSrc={github} bodyText='GitHub is a developer platform that allows developers to create, store, manage and share their code.' link='https://github.com/' headerText='GitHub' headerUrl='github.com' linkText='View Documentation'/>,
         <CustomCard  iconSrc={spring} bodyText='Spring Boot is an open-source Java-based framework used for creating standalone, production-grade Spring-based applications with minimal effort.' link='https://spring.io/projects/spring-boot' headerText='Spring Boot' headerUrl='spring.io' linkText='View Documentation'/>,
         <CustomCard  iconSrc={mongo} bodyText='MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product. ' link='https://www.mongodb.com/' headerText='MongoDB' headerUrl='mongodb.com' linkText='View Documentation'/>,
-        <CustomCard  iconSrc={azure} bodyText='Microsoft Azure, is a cloud computing platform run by Microsoft. It offers access, management, and the development of applications and services through global data centers.' link='https://azure.microsoft.com/' headerText='Azure Dev Ops' headerUrl='/azure.microsoft.com' linkText='View Documentation'/>
+        <CustomCard  iconSrc={azure} bodyText='Microsoft Azure, is a cloud computing platform run by Microsoft. It offers access, management, and the development of applications and services through global data centers.' link='https://azure.microsoft.com/' headerText='Azure Dev Ops' headerUrl='/azure.microsoft.com' linkText='View Documentation'/>,
+        <CustomCard  iconSrc={java} bodyText='Java is a high-level, class-based, object-oriented programming language that is designed with few dependencies and a write once, run anywhere architecture.' link='https://www.java.com/en/' headerText='Java' headerUrl='java.com' linkText='View Documentation'/>,
+        <CustomCard  iconSrc={cpp} bodyText='C++ is a cross-platform language that can be used to create high-performance applications. C++ gives programmers control over system resources and memory.' link='https://www.w3schools.com/cpp/default.asp' headerText='C++' headerUrl='w3schools.com' linkText='View Documentation'/>,
+        <CustomCard  iconSrc={python} bodyText='Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.' link='https://www.python.org/' headerText='Python' headerUrl='python.org' linkText='View Documentation'/>,
+        <CustomCard  iconSrc={sql} bodyText='Structured Query Language is a domain-specific language used to manage data, especially in a relational database management system.' link='https://www.w3schools.com/sql' headerText='SQL' headerUrl='w3schools.com/sql' linkText='View Documentation'/>,
+
+        // <CustomCard  iconSrc={} bodyText='' link='' headerText='' headerUrl='' linkText='View Documentation'/>,
+        
+
     ]
 
   return (
