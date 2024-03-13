@@ -90,7 +90,7 @@ html::-webkit-scrollbar-track {
   z-index: 3;
   max-height: 10vh;
   min-height: 50px;
-  min-width:200px;
+  min-width:400px;
   max-width: max-content;
   padding-left: 2vw;
   padding-right:2vw;
@@ -101,7 +101,6 @@ html::-webkit-scrollbar-track {
 
   font-family: "Goblin";
   font-size: 4vw;
-  font-size-adjust: 2;
   margin-top: 30vh;
 
   background-color:  #353535;
@@ -116,9 +115,18 @@ html::-webkit-scrollbar-track {
   max-height: fit-content;
 }
 .click-me{
-  position: relative; 
-  top:30;
-  left:70%
+  position: relative;
+  top: 3vh;
+  left: 40vw;
+}
+.clickme-chip{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 10rem !important;
+  height: 4rem;
+  max-width: 35rem;
+  font-family: monospace;
 }
 .hidden-1 {
   animation: fadeOut1 forwards;
@@ -262,10 +270,10 @@ html::-webkit-scrollbar-track {
   -moz-user-select: none; /*Firefox*/
 }
 .chip:hover{
-  animation: buttonAnime 1s forwards;
+  animation: buttonAnime .7s forwards;
 }
 .chip:not(:hover){
-  animation: buttonAnimeBack 1s backwards;
+  animation: buttonAnimeBack .7s backwards;
 }
 @keyframes buttonAnime {
   0% { box-shadow: none;}
@@ -273,9 +281,8 @@ html::-webkit-scrollbar-track {
   }
 }
 @keyframes buttonAnimeBack {
-  0% {   box-shadow: #0067dd 5px 5px, #005BC4 10px 10px, #004493 15px 15px, #002E62 20px 20px;
+  0% {   box-shadow: #0067dd 5px 5px, #005BC4 10px 10px, #004493 15px 15px, #002E62 20px 20px;}
   100% { box-shadow: none;}
-  }
 }
 
 .flex-start{

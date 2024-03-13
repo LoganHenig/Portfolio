@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Fade,AttentionSeeker, Hinge } from "react-awesome-reveal";
 import { Tile } from "./Tile";
+import {Chip} from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
 
@@ -56,7 +57,7 @@ export const Animation = () => {
       );
     const aboutToNavigate = async url =>{ 
     setAnime("hidden")
-    await delay(2000);
+    await delay(2500);
     navigate(url);
     }
 
@@ -84,11 +85,9 @@ export const Animation = () => {
             <div className="logan-henig">
                 <span className="flex-container font">	&#60;div&#62; Logan Henig &#60;/div&#62;</span>
 
-                <Button onClick={()=>{aboutToNavigate("../portfolio")}} radius="full" className=" click-me bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">
+                {/* <Chip className="chip" onClick={() => {setLanguageChip(!languageChip); clearCards(1000);}} color={`${languageChip ? "primary" : "default"}`}>Language</Chip> */}
 
-                {/* <Button onClick={()=>{setShowName(!showName)}} radius="full" className=" click-me bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"> */}
-                    Click ME
-                </Button>
+                <Chip className="chip click-me clickme-chip" size="lg" onClick={() => {aboutToNavigate("../portfolio")}} variant="bordered" color={'primary'}>Language</Chip>
             </div>
 
         </Fade>
