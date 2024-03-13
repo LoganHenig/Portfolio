@@ -232,3 +232,14 @@ html::-webkit-scrollbar-track {
   0% { transform: translate(0, 0);}
   100% { transform: translate(0, -5%);}
 }
+.about-container{
+  background-color: #18181B;
+  padding: 3rem;
+  border-radius: 15px;
+  max-width: 40rem;
+  
+  /* font-weight: bold!important; */
+  font-family: monospace;
+  font-size: calc((2vw + 2vh + 1vmin)/2);
+
+}

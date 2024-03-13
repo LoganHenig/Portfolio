@@ -13,6 +13,7 @@ import spring from '../assets/springboot.png'
 import mongo from '../assets/mongo.png'
 import azure from '../assets/azure.png'
 import { Footer } from "./footer";
+import { MyDivider } from "./divider";
 
 
 export const Landing = () => {
@@ -33,14 +34,22 @@ export const Landing = () => {
     <main className="dark text-foreground bg-background fill-screen">
     
     <NavBar></NavBar>
+    {/* <Fade > */}
     <div className="center-content">
         <div className='name-container'>
          <Fade delay={1000}>
             <h1 className='my-name'>Logan Henig</h1>
         </Fade>   
 
-        </div>
-        <h3 className='technology-used'> Below is are cards showing the Technology I used to make this app.</h3>
+    </div>
+
+    <div className='about-container'> 
+    <div>&#60;h1&#62; Hello, &#60;/h1&#62;</div> 
+    <div>&#60;div&#62; Welcome to my portfolio! I am a fullstack web developer from Michigan &#60;/div&#62;</div>
+    </div>
+    <MyDivider/>
+    <h3 className='technology-used'> Below is are cards showing the Technology I used to make this app.</h3>
+    
     <div className="tech-continer" >
         <Fade cascade={true} damping={0.3}>
             
@@ -60,6 +69,7 @@ export const Landing = () => {
     </div> 
     </div>
     <Footer/>
+    {/* </Fade> */}
     </main>
     )
   
