@@ -87,7 +87,7 @@ export const Animation = () => {
 
                 {/* <Chip className="chip" onClick={() => {setLanguageChip(!languageChip); clearCards(1000);}} color={`${languageChip ? "primary" : "default"}`}>Language</Chip> */}
 
-                <Chip className="chip click-me clickme-chip" size="lg" onClick={() => {aboutToNavigate("../portfolio")}} variant="bordered" color={'primary'}>Language</Chip>
+                <Chip className="chip click-me clickme-chip" size="lg" onClick={() => {aboutToNavigate("../portfolio")}} variant="bordered" color={'primary'}>ClickME</Chip>
             </div>
 
         </Fade>
