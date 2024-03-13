@@ -243,3 +243,8 @@ html::-webkit-scrollbar-track {
   font-size: calc((2vw + 2vh + 1vmin)/2);
 
 }
+@media (width <= 650px) {
+  .about-container{
+      padding: 1.5rem; 
+  }
+}
