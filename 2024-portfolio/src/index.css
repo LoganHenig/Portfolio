@@ -291,5 +291,5 @@ html::-webkit-scrollbar-track {
 }
 .loading{
   min-height: 40vh;
-  padding-top: 5vh;
+  padding-top: 15vh;
 }
