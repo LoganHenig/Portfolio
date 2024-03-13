@@ -230,7 +230,7 @@ html::-webkit-scrollbar-track {
 }
 @keyframes select {
   0% { transform: translate(0, 0);}
-  100% { transform: translate(0, -5%);}
+  100% { transform: translate(0, -3%);}
 }
 .about-container{
   background-color: #18181B;
@@ -247,4 +247,42 @@ html::-webkit-scrollbar-track {
   .about-container{
       padding: 1.5rem; 
   }
+}
+
+.chip-container{
+  max-width: 70rem;
+  width: 100%;
+  display: flex;
+  margin: 1vh;
+
+}
+.chip{
+  user-select: none;
+  -webkit-user-select: none; /*Safari*/
+  -moz-user-select: none; /*Firefox*/
+}
+.chip:hover{
+  animation: buttonAnime 1s forwards;
+}
+.chip:not(:hover){
+  animation: buttonAnimeBack 1s backwards;
+}
+@keyframes buttonAnime {
+  0% { box-shadow: none;}
+  100% {   box-shadow: #0067dd 5px 5px, #005BC4 10px 10px, #004493 15px 15px, #002E62 20px 20px;
+  }
+}
+@keyframes buttonAnimeBack {
+  0% {   box-shadow: #0067dd 5px 5px, #005BC4 10px 10px, #004493 15px 15px, #002E62 20px 20px;
+  100% { box-shadow: none;}
+  }
+}
+
+.flex-start{
+  display: flex;
+  justify-content: flex-start;
+}
+.loading{
+  min-height: 40vh;
+  padding-top: 5vh;
 }
