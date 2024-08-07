@@ -11,20 +11,22 @@ export const NavBar = () => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          
+          <Button color="primary" >
+            logan.henig@gmail.com
+          </Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
       <NavbarItem className="hidden lg:flex">
           <Link color="primary" target="_blank" href="https://github.com/LoganHenig">
-            GitHub
+            GitHub Portfolio
           </Link>
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
+        {/* <NavbarItem className="hidden lg:flex">
           <Link color="primary" target="_blank" href="https://github.com/LoganHenig">
             Other Thing
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
     </Navbar>
   );

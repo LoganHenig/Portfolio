@@ -45,7 +45,7 @@ export const Landing = () => {
         <CustomCard tag="Game"  iconSrc={godot} bodyText='Godot is a cross-platform, free and open-source game engine released under the permissive MIT license. ' link='https://godotengine.org/' headerText='Godot' headerUrl='godotengine.org' linkText='View Documentation'/>,
         <CustomCard tag="UI"    iconSrc={vue} bodyText='Vue.js is an open-source model-view-viewmodel front end JavaScript library for building user interfaces and single-page applications.' link='https://vuejs.org/' headerText='Vue' headerUrl='vuejs.org' linkText='View Documentation'/>,
         <CustomCard tag="Lang"  iconSrc={js} bodyText='JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.' link='https://developer.oracle.com/languages/javascript.html' headerText='JavaScript' headerUrl='developer.oracle.com' linkText='View Documentation'/>,
-        <CustomCard tag="Other" iconSrc={github} bodyText='GitHub is a developer platform that allows developers to create, store, manage and share their code.' link='https://github.com/' headerText='GitHub' headerUrl='github.com' linkText='View Documentation'/>,
+        <CustomCard tag="Other" iconSrc={github} bodyText='GitHub is a developer platform that allows developers to create, store, manage and share their code.' link='https://github.com/LoganHenig' headerText='GitHub' headerUrl='github.com/LoganHenig' linkText='View My GitHub'/>,
         <CustomCard tag="Data"  iconSrc={spring} bodyText='Spring Boot is an open-source Java-based framework used for creating standalone, production-grade Spring-based applications with minimal effort.' link='https://spring.io/projects/spring-boot' headerText='Spring Boot' headerUrl='spring.io' linkText='View Documentation'/>,
         <CustomCard tag="Data"  iconSrc={mongo} bodyText='MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product. ' link='https://www.mongodb.com/' headerText='MongoDB' headerUrl='mongodb.com' linkText='View Documentation'/>,
         <CustomCard tag="Other" iconSrc={azure} bodyText='Microsoft Azure, is a cloud computing platform run by Microsoft. It offers access, management, and the development of applications and services through global data centers.' link='https://azure.microsoft.com/' headerText='Azure Dev Ops' headerUrl='azure.microsoft.com' linkText='View Documentation'/>,
@@ -99,7 +99,6 @@ export const Landing = () => {
 
   return (
     <main className="dark text-foreground bg-background fill-screen">
-    
     <NavBar></NavBar>
     {/* <Fade > */}
     <div className="center-content">
@@ -111,10 +110,15 @@ export const Landing = () => {
     </div>
 
     <div className='about-container'> 
-    <div>&#60;h1&#62; Hello, &#60;/h1&#62;</div> 
-    <div>&#60;div&#62; Welcome to my portfolio! I am a fullstack web developer from Michigan &#60;/div&#62;</div>
+        <Fade delay={800}>
+            <div>&#60;h1&#62; Hello, &#60;/h1&#62;</div> 
+            <div>&#60;div&#62; Welcome to my portfolio! I am a fullstack web developer from Michigan &#60;/div&#62;</div>
+        </Fade>
     </div>
-    <MyDivider/>
+    <Fade delay={300}>
+        <MyDivider/>
+    </Fade>
+
     <h3 className='technology-used'> Below is are cards showing the Technology I used to make this app.</h3>
     
     <div className="tech-continer" >
