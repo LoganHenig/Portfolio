@@ -87,7 +87,7 @@ html::-webkit-scrollbar-track {
   inset: 0;
   margin: auto;
 
-  z-index: 3;
+  z-index: 10;
   max-height: 10vh;
   min-height: 50px;
   min-width:400px;

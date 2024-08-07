@@ -1,7 +1,7 @@
 import React, {useState}from "react";
 import {Divider} from "@nextui-org/react";
 import './divider.css'
-import { Fade } from "react-awesome-reveal";
+import Fade from "react-reveal/Fade"
 
 
 export const MyDivider = ({number, hidden}) => {
@@ -46,10 +46,12 @@ export const MyDivider = ({number, hidden}) => {
     {college &&
     <div className="highlights-text">
         <Fade>
+            <>
             <div>Cedarville University,</div>
             <div>
             During my time at college, I dove into the world of computer science with a focus on Cyber Operations. I got my hands dirty with Object-Oriented Programming (OOP), Dynamic Programming, Threading, and lots more. Beyond the classroom, I immersed myself in computer-related clubs like the Cyber Defense Club, where I learned practical skills and soaked up knowledge like a sponge. Along the way, I also delved into databases and web applications, gaining valuable insights that continue to shape my journey as a web developer. Cedarville University was more than just a school; it was where my passion for technology truly flourished, setting me on the path to becoming the developer I am today.
             </div>
+            </>
         </Fade>
     </div>
    

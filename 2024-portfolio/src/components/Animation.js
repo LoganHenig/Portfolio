@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Fade,AttentionSeeker, Hinge } from "react-awesome-reveal";
+import Fade from "react-reveal/Fade"
 import { Tile } from "./Tile";
 import {Chip} from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
 
-
+import { keyframes } from "@emotion/react";
 export const Animation = () => {
     const [col, setCol] = useState(0);
     const [row, setRow] = useState(0);
@@ -63,24 +63,23 @@ export const Animation = () => {
 
   return (
     <>
+            <div  id="grid" onClick={() => {setSquareArr([]) }}>
+            {squareArr.length > 0 &&
 
-        <div  id="grid" onClick={() => {setSquareArr([]) }}>
-        {squareArr.length > 0 &&
-
-            squareArr.map((row, i) => (
-            // {row}
-            <><Fade  cascade={true} damping={.1}>{
-                row.map((col,j)=> <Tile hidden={anime}> {col}</Tile>)
-                }</Fade></>
-        ))}
-
-        </div>
+                squareArr.map((row, i) => (
+                // {row}
+                <>{
+                    row.map((col,j)=> <Fade delay={50*j}><Tile hidden={anime}> {col}</Tile></Fade>)
+                    }</>
+            ))}
+            </div>
+        
         {/* {
             squareArr   THIS WORKS
         } */}
 
             {/* CENTERED TEXT */}
-        <Fade delay={1500} Animation="bounceIntRight">    
+        <Fade delay={1500} Animation="bounceInRight">    
               
             <div className="logan-henig">
                 <span className="flex-container font">	&#60;div&#62; Logan Henig &#60;/div&#62;</span>

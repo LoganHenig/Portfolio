@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Fade } from "react-awesome-reveal";
+import Fade from "react-reveal/Fade"
 import { CustomCard } from "./Card";
 import {NavBar} from "./NavBar"
 import {Chip} from "@nextui-org/react";
@@ -20,6 +20,8 @@ import python from '../assets/python.png'
 import sql from '../assets/sql.png'
 import html from '../assets/html.png'
 import axios from '../assets/axios.png'
+import godot from '../assets/Godot_icon.png'
+import GDscript from '../assets/GDscript.png'
 
 import { Footer } from "./footer";
 import { MyDivider } from "./divider";
@@ -40,12 +42,14 @@ export const Landing = () => {
         <CustomCard tag="UI"    iconSrc={reactIcon} bodyText='ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components' link='https://react.dev/' headerText='React' headerUrl='react.dev' linkText='View Documentation'/>,
         <CustomCard tag="UI"    iconSrc={nextUIIcon} bodyText='NextUI is a component-based CSS framework, which means it provides a set of pre-designed components you can use at any time.' link='https://nextui.org/' headerText='NextUI' headerUrl='nextui.org' linkText='View Documentation'/>,
         <CustomCard tag="UI"    iconSrc={reveal} bodyText='React Awesome Reveal is a react library that uses Web Animations API for performant animations.' link='https://react-awesome-reveal.morello.dev/' headerText='React Awesom Reveal' headerUrl='react-awesome-reveal.morello.dev' linkText='View Documentation'/>,
+        <CustomCard tag="Game"  iconSrc={godot} bodyText='Godot is a cross-platform, free and open-source game engine released under the permissive MIT license. ' link='https://godotengine.org/' headerText='Godot' headerUrl='godotengine.org' linkText='View Documentation'/>,
         <CustomCard tag="UI"    iconSrc={vue} bodyText='Vue.js is an open-source model-view-viewmodel front end JavaScript library for building user interfaces and single-page applications.' link='https://vuejs.org/' headerText='Vue' headerUrl='vuejs.org' linkText='View Documentation'/>,
         <CustomCard tag="Lang"  iconSrc={js} bodyText='JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.' link='https://developer.oracle.com/languages/javascript.html' headerText='JavaScript' headerUrl='developer.oracle.com' linkText='View Documentation'/>,
         <CustomCard tag="Other" iconSrc={github} bodyText='GitHub is a developer platform that allows developers to create, store, manage and share their code.' link='https://github.com/' headerText='GitHub' headerUrl='github.com' linkText='View Documentation'/>,
         <CustomCard tag="Data"  iconSrc={spring} bodyText='Spring Boot is an open-source Java-based framework used for creating standalone, production-grade Spring-based applications with minimal effort.' link='https://spring.io/projects/spring-boot' headerText='Spring Boot' headerUrl='spring.io' linkText='View Documentation'/>,
         <CustomCard tag="Data"  iconSrc={mongo} bodyText='MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product. ' link='https://www.mongodb.com/' headerText='MongoDB' headerUrl='mongodb.com' linkText='View Documentation'/>,
         <CustomCard tag="Other" iconSrc={azure} bodyText='Microsoft Azure, is a cloud computing platform run by Microsoft. It offers access, management, and the development of applications and services through global data centers.' link='https://azure.microsoft.com/' headerText='Azure Dev Ops' headerUrl='azure.microsoft.com' linkText='View Documentation'/>,
+        <CustomCard tag="Lang" iconSrc={GDscript} bodyText='GDScript is a dynamically and statically typed scripting language for integration with the Godot game engine.' link='https://gdscript.com/' headerText='GD script' headerUrl='gdscript.com' linkText='View Documentation'/>,
         <CustomCard tag="Lang"  iconSrc={java} bodyText='Java is a high-level, class-based, object-oriented programming language that is designed with few dependencies and a write once, run anywhere architecture.' link='https://www.java.com/en/' headerText='Java' headerUrl='java.com' linkText='View Documentation'/>,
         <CustomCard tag="Lang"  iconSrc={cpp} bodyText='C++ is a cross-platform language that can be used to create high-performance applications. C++ gives programmers control over system resources and memory.' link='https://www.w3schools.com/cpp/default.asp' headerText='C++' headerUrl='w3schools.com/CPP' linkText='View Documentation'/>,
         <CustomCard tag="Lang"  iconSrc={python} bodyText='Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.' link='https://www.python.org/doc/' headerText='Python' headerUrl='python.org' linkText='View Documentation'/>,
@@ -114,12 +118,14 @@ export const Landing = () => {
     <h3 className='technology-used'> Below is are cards showing the Technology I used to make this app.</h3>
     
     <div className="tech-continer" >
-        <Fade cascade={true} damping={0.3}>
-            
+        <Fade delay={100}>
             <CustomCard  iconSrc={reactIcon} bodyText='ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components' link='https://react.dev/' headerText='React' headerUrl='react.dev' linkText='View Documentation'/>
+        </Fade>
+        <Fade delay={200}>
             <CustomCard  iconSrc={nextUIIcon} bodyText='NextUI is a component-based CSS framework, which means it provides a set of pre-designed components you can use at any time.' link='https://nextui.org/' headerText='NextUI' headerUrl='nextui.org' linkText='View Documentation'/>
+        </Fade>
+        <Fade delay={300}>
             <CustomCard  iconSrc={reveal} bodyText='React Awesome Reveal is a react library that uses Web Animations API for performant animations.' link='https://react-awesome-reveal.morello.dev/' headerText='React Awesom Reveal' headerUrl='react-awesome-reveal.morello.dev' linkText='View Documentation'/>
-            
         </Fade>
     </div>    
     <h3 className='technology-used'> Technology I have used to make other projects </h3>
@@ -137,11 +143,11 @@ export const Landing = () => {
     </div>
     <div className="tech-continer" >
 
-        {delayBool && 
-        <Fade cascade={true} damping={0.1}>
-        {filteredCardData} 
-        </Fade>
-        }
+        {delayBool && (
+        filteredCardData.map((element, i) =>{
+            return(<Fade delay={i*40}> {element} </Fade>)
+        })
+        )}
         {!delayBool &&
         <div className="loading">
         <CircularProgress aria-label="Loading..." />
