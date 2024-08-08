@@ -3,7 +3,7 @@
 [build]
   base    = "2024-portfolio"
   publish = "build/"
-  command = "CI= npm run build --force"
+  command = "CI= npm run build --force --legacy-peer-deps"
 
 [[redirects]]
   from = "/*"
