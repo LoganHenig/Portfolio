@@ -203,7 +203,7 @@ html::-webkit-scrollbar-track {
   100% { transform: translate(0, 0);}
 }
 .my-name {
-  color: hsl(0, 0%, 28%);
+  color: hsl(0, 0%, 100%);
   font-size: 50px!important;
   font-weight: bold!important;
   font-family: monospace;
@@ -211,10 +211,6 @@ html::-webkit-scrollbar-track {
   cursor: pointer;
   text-transform: uppercase;
   padding: 64px;
-  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 15s infinite linear;
   font-size: 50px;
 }
 

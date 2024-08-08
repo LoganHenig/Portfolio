@@ -11,7 +11,7 @@ export const NavBar = () => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Button color="primary" >
+          <Button color="primary" variant="light" >
             logan.henig@gmail.com
           </Button>
         </NavbarItem>
@@ -19,7 +19,7 @@ export const NavBar = () => {
       <NavbarContent justify="end">
       <NavbarItem className="hidden lg:flex">
           <Link color="primary" target="_blank" href="https://github.com/LoganHenig">
-            GitHub Portfolio
+            GitHub_Portfolio
           </Link>
         </NavbarItem>
         {/* <NavbarItem className="hidden lg:flex">
