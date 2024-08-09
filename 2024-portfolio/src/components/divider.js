@@ -1,7 +1,7 @@
 import React, {useState}from "react";
 import {Divider} from "@nextui-org/react";
 import './divider.css'
-import Fade from "react-reveal/Fade"
+// import Fade from "react-reveal/Fade"
 
 
 export const MyDivider = ({number, hidden}) => {
@@ -45,7 +45,7 @@ export const MyDivider = ({number, hidden}) => {
     </div>
     {college &&
     <div className="highlights-text">
-        <Fade>
+        {/* <Fade>
             <>
             <div>Cedarville University,</div>
             <div>
@@ -73,7 +73,7 @@ export const MyDivider = ({number, hidden}) => {
             <div>
             Currently, I am employed at Skillstorm, where I am contracted to work with Price Waterhouse Coopers (PwC). Over the past year, my team and I have embarked on an exciting journey, building from scratch a cutting-edge React web application and a robust Spring Boot backend. Together, these components seamlessly interact to drastically improve the user experience for technology registration at PwC. It's been a thrilling process witnessing our project evolve from conceptualization to implementation, and I take pride in our collective effort to deliver a solution that not only meets but exceeds expectations. Our collaboration underscores the power of teamwork and innovation in creating transformative solutions for real-world challenges.
             </div>
-        </Fade>
+        </Fade> */}
     </div>
     }
     </>

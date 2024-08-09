@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Fade from "react-reveal/Fade"
+// import Fade from "react-reveal/Fade"
 import { Tile } from "./Tile";
 import {Chip} from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
@@ -69,7 +69,8 @@ export const Animation = () => {
                 squareArr.map((row, i) => (
                 // {row}
                 <>{
-                    row.map((col,j)=> <Fade delay={50*j}><Tile hidden={anime}> {col}</Tile></Fade>)
+                    // row.map((col,j)=> <Fade delay={50*j}><Tile hidden={anime}> {col}</Tile></Fade>)
+                    row.map((col,j)=> <Tile hidden={anime}> {col}</Tile>)
                     }</>
             ))}
             </div>
@@ -79,7 +80,7 @@ export const Animation = () => {
         } */}
 
             {/* CENTERED TEXT */}
-        <Fade delay={1500} Animation="bounceInRight">    
+        {/* <Fade delay={1500} Animation="bounceInRight">     */}
               
             <div className="logan-henig">
                 <span className="flex-container font">	&#60;div&#62; Logan Henig &#60;/div&#62;</span>
@@ -89,7 +90,7 @@ export const Animation = () => {
                 <Chip className="chip click-me clickme-chip" size="lg" onClick={() => {aboutToNavigate("../portfolio")}} variant="bordered" color={'primary'}>ClickME</Chip>
             </div>
 
-        </Fade>
+        {/* </Fade> */}
     </>
     ) 
 }    
