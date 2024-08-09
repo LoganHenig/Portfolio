@@ -102,34 +102,34 @@ export const Landing = () => {
     <NavBar></NavBar>
     <div className="center-content">
         <div className='name-container'>
-         {/* <Fade delay={1000}> */}
+         <Fade delay={1000}>
             <h1 className='my-name'>Logan Henig</h1>
-        {/* </Fade>    */}
+        </Fade>   
 
     </div>
 
     <div className='about-container'> 
-        {/* <Fade delay={800}> */}
+        <Fade delay={800}>
             <div>&#60;h1&#62; Hello, &#60;/h1&#62;</div> 
             <div>&#60;div&#62; Welcome to my portfolio! I am a fullstack web developer from Michigan &#60;/div&#62;</div>
-        {/* </Fade> */}
+        </Fade>
     </div>
-    {/* <Fade delay={300}> */}
+    <Fade delay={300}>
         <MyDivider/>
-    {/* </Fade> */}
+    </Fade>
 
     <h3 className='technology-used'> Below is are cards showing the Technology I used to make this app.</h3>
     
     <div className="tech-continer" >
-        {/* <Fade delay={100}> */}
+        <Fade delay={100}>
             <CustomCard  iconSrc={reactIcon} bodyText='ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components' link='https://react.dev/' headerText='React' headerUrl='react.dev' linkText='View Documentation'/>
-        {/* </Fade> */}
-        {/* <Fade delay={200}> */}
+        </Fade>
+        <Fade delay={200}>
             <CustomCard  iconSrc={nextUIIcon} bodyText='NextUI is a component-based CSS framework, which means it provides a set of pre-designed components you can use at any time.' link='https://nextui.org/' headerText='NextUI' headerUrl='nextui.org' linkText='View Documentation'/>
-        {/* </Fade> */}
-        {/* <Fade delay={300}> */}
+        </Fade>
+        <Fade delay={300}>
             <CustomCard  iconSrc={reveal} bodyText='React Awesome Reveal is a react library that uses Web Animations API for performant animations.' link='https://react-awesome-reveal.morello.dev/' headerText='React Awesom Reveal' headerUrl='react-awesome-reveal.morello.dev' linkText='View Documentation'/>
-        {/* </Fade> */}
+        </Fade>
     </div>    
     <h3 className='technology-used'> Technology I have used to make other projects </h3>
     <div className="chip-container">
