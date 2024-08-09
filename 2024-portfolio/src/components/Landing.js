@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-// import Fade from "react-reveal/Fade"
+import Fade from "react-reveal/Fade"
 import { CustomCard } from "./Card";
 import {NavBar} from "./NavBar"
 import {Chip} from "@nextui-org/react";
@@ -148,9 +148,8 @@ export const Landing = () => {
 
         {delayBool && (
         filteredCardData.map((element, i) =>{
-            // return(<Fade delay={i*40}> {element} </Fade>)
+            return(<Fade delay={i*40}> {element} </Fade>)
 
-            return({element})
         })
         )}
         {!delayBool &&
