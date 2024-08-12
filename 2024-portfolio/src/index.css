@@ -21,18 +21,30 @@ code {
 
 }
 
-html::-webkit-scrollbar {
-  width: 10px;
+@media (width >= 800px){
+
+  html::-webkit-scrollbar {
+    width: 10px;
+  }
+  html::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #505050;
+  }
+  html::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border:  solid #cacaca;
+  }
 }
-html::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background-color: #505050;
+@media (width < 800px){
+  html::-webkit-scrollbar{
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  }
 }
-html::-webkit-scrollbar-track {
-  border-radius: 8px;
-  background-color: #e7e7e7;
-  border:  solid #cacaca;
-}
+
+
 #grid {
   z-index: 2;
   width: 100vw;
