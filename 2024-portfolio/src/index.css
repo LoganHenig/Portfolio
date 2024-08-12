@@ -44,6 +44,59 @@ code {
   }
 }
 
+.popup-container{
+  width: 250px;
+  min-height: 85px;
+  border-radius:  8px;
+  border: solid 2px #6b6b6e ;
+  padding: 1rem;
+  margin: 1rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #18181B ;
+  position:fixed;
+  bottom:1rem;
+  right:1rem;
+  z-index: 5;
+
+}
+.pop-up{
+  animation: popUp .7s ease-in-out;
+}
+.pop-down{
+  animation: popDown .7s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes popUp {
+  0%{
+    transform: scale(0.1);
+    transform: translateY(150%);
+  }
+  100%{
+    transform: scale(1);
+    transform: translateY(0%);
+  }
+}
+@keyframes popDown {
+  0%{
+    transform: scale(1);
+    transform: translateY(0%);
+  }
+  20%{
+    transform: scale(1.2);
+    transform: translateY(-10%);
+  }
+  100%{
+    transform: scale(.1);
+    transform: translateY(200%);
+  }
+}
+
+.popup-text{
+  width: 100%;
+  padding-left: 15px;;
+}
 
 #grid {
   z-index: 2;

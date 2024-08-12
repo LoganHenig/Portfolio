@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import { PopUp } from "./popup";
 // import {AcmeLogo} from "./AcmeLogo.jsx";
 
 export const NavBar = () => {
+  const [animation, setAnimation] = useState ("");
+
+  useEffect(() =>{
+    if (animation == 'pop-up' && animation !== 'pop-down'){
+      setTimeout(() =>{
+        setAnimation('pop-down');
+        setTimeout(() =>{
+          //setAnimation("");
+        }, 3000)
+      }, 3000)
+    }
+  },[animation])
   return (
+    <>
     <Navbar shouldHideOnScroll className="bg-dark">
       <NavbarBrand>
         {/* <AcmeLogo /> */}
@@ -11,7 +25,11 @@ export const NavBar = () => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Button color="primary" variant="light" >
+          <Button color="primary" variant="light" onClick={() => 
+            {
+              navigator.clipboard.writeText("logan.henig@gmail.com")
+              setAnimation('pop-up')
+            }}>
             logan.henig@gmail.com
           </Button>
         </NavbarItem>
@@ -29,5 +47,9 @@ export const NavBar = () => {
         </NavbarItem> */}
       </NavbarContent>
     </Navbar>
+    {(animation == 'pop-up' || animation == 'pop-down') &&
+      <PopUp animation={animation}/>
+    }
+    </>
   );
 }
