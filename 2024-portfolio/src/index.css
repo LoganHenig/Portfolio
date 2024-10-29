@@ -148,10 +148,22 @@ code {
   font-family: monospace;
 }
 .logan-henig{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
   position:absolute;
+  flex-direction: column;
   inset: 0;
   margin: auto;
+  margin-top: 35vh;
 
+
+  color: white
+}
+.logan-henig-background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
   max-height: 10vh;
   min-height: 50px;
@@ -159,18 +171,43 @@ code {
   max-width: max-content;
   padding-left: 2vw;
   padding-right:2vw;
-  
+  background-color:  #353535;
   border: #b7dfff;
   border: solid 2px;
   border-radius: 140px;
-
   font-family: "Goblin";
-  font-size: 4vw;
-  margin-top: 30vh;
-
-  background-color:  #353535;
-  color: white
+  font-size:1.2rem;
 }
+.clickme-chip{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 10rem;
+  height: 3rem;
+  max-width: 35rem;
+  font-family: monospace;
+}
+@media (min-width: 992px) {
+  .logan-henig-background {
+    font-size: 4rem;
+  }
+  .clickme-chip{
+
+    height: 4rem;
+  }
+  
+} 
+@media (max-width: 422px) {
+  .logan-henig-background {
+    min-width:200px;
+    font-size: .8rem;
+  }
+  .clickme-chip{
+    width: 1rem;
+    max-height: 2rem;
+    font-size: small;
+  }
+} 
 .flex-container{
   height:100%;
   display: flex;
@@ -182,17 +219,9 @@ code {
 .click-me{
   position: relative;
   top: 3vh;
-  left: 40vw;
+  left: 15vw;
 }
-.clickme-chip{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 10rem !important;
-  height: 4rem;
-  max-width: 35rem;
-  font-family: monospace;
-}
+
 .hidden-1 {
   animation: fadeOut1 forwards;
   animation-duration: 3s;

@@ -82,12 +82,15 @@ export const Animation = () => {
         <Fade delay={1500} Animation="bounceInRight">    
               
             <div className="logan-henig">
-                <span className="flex-container font">	&#60;div&#62; Logan Henig &#60;/div&#62;</span>
+                <div className="logan-henig-background">
+                    <div className="flex-container font">	&#60;div&#62; Logan Henig &#60;/div&#62;</div>
+                </div>
 
                 {/* <Chip className="chip" onClick={() => {setLanguageChip(!languageChip); clearCards(1000);}} color={`${languageChip ? "primary" : "default"}`}>Language</Chip> */}
 
                 <Chip className="chip click-me clickme-chip" size="lg" onClick={() => {aboutToNavigate("../portfolio")}} variant="bordered" color={'primary'}>ClickME</Chip>
             </div>
+            
 
         </Fade>
     </>
